@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on Viana Industries</title>
+    <link>https://vianaIndustries.github.io/project/</link>
+    <description>Recent content in Project on Viana Industries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Apr 2023 21:43:49 +0100</lastBuildDate><atom:link href="https://vianaIndustries.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IOT Bell</title>
+      <link>https://vianaIndustries.github.io/project/iot-bell/</link>
+      <pubDate>Sun, 09 Apr 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/project/iot-bell/</guid>
+      <description>IOT Bell Created: April 9, 2022 8:41 PM
+Arduino Basic #include &amp;lt;Arduino.h&amp;gt; void setup() { pinMode(LED_BUILTIN, OUTPUT); } void loop() { digitalWrite(LED_BUILTIN, HIGH); // turn the LED on (HIGH is the voltage level) delay(50); // wait for a second digitalWrite(LED_BUILTIN, LOW); // turn the LED off by making the voltage LOW delay(500); // wait for a second } ; PlatformIO Project Configuration File ; ; Build options: build flags, source filter ; Upload options: custom upload port, speed and extra flags ; Library options: dependencies, extra library storages ; Advanced options: extra scripting ; ; Please visit documentation for the other options and examples ; https://docs.</description>
+    </item>
+    
+    <item>
+      <title>3ds Xl she’ll swap</title>
+      <link>https://vianaIndustries.github.io/project/3ds-xl-shell-swap/</link>
+      <pubDate>Fri, 24 Feb 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/project/3ds-xl-shell-swap/</guid>
+      <description>3ds Xl she’ll swap Created: February 24, 2023 3:22 PM</description>
+    </item>
+    
+    <item>
+      <title>Soldering iron Caddy</title>
+      <link>https://vianaIndustries.github.io/project/soldering-iron-caddy/</link>
+      <pubDate>Tue, 17 Jan 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/project/soldering-iron-caddy/</guid>
+      <description>Soldering iron Caddy Created: January 17, 2023 3:29 PM</description>
+    </item>
+    
+    <item>
+      <title>Workbench 3</title>
+      <link>https://vianaIndustries.github.io/project/workbench-3/</link>
+      <pubDate>Wed, 04 Jan 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/project/workbench-3/</guid>
+      <description>Workbench #3 Created: January 4, 2023 7:37 PM
+4x 20x40 pinho
+2x 40x40 casquinha branca
+2x mdf/aglomerado</description>
+    </item>
+    
+    <item>
+      <title>Sign: NASA</title>
+      <link>https://vianaIndustries.github.io/project/sign-nasa/</link>
+      <pubDate>Sun, 30 Oct 2022 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/project/sign-nasa/</guid>
+      <description>Sign: NASA Created: October 30, 2022 8:57 PM</description>
+    </item>
+    
+    <item>
+      <title>Phant0mDeck</title>
+      <link>https://vianaIndustries.github.io/project/phant0mdeck/</link>
+      <pubDate>Sat, 26 Mar 2022 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/project/phant0mdeck/</guid>
+      <description>Phant0mDeck Created: March 26, 2022 9:23 PM
+; PlatformIO Project Configuration File ; ; Build options: build flags, source filter ; Upload options: custom upload port, speed and extra flags ; Library options: dependencies, extra library storages ; Advanced options: extra scripting ; ; Please visit documentation for the other options and examples ; https://docs.platformio.org/page/projectconf.html [env:nodemcu] platform = espressif8266 board = nodemcu framework = arduino lib_deps = chris--a/Keypad@^3.1.1 knolleary/PubSubClient@^2.8 monitor_speed = 115200 #include &amp;lt;Arduino.</description>
+    </item>
+    
+  </channel>
+</rss>

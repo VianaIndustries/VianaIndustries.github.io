@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Viana Industries</title>
+    <link>https://vianaIndustries.github.io/about/</link>
+    <description>Recent content in About on Viana Industries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://vianaIndustries.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://vianaIndustries.github.io/about/about/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/about/about/</guid>
+      <description>Hi Carlos Viana Industrial Automation Engineer, maker &amp;hellip; I&amp;rsquo;m a 26.0123783181 year-old engineer.</description>
+    </item>
+    
+  </channel>
+</rss>

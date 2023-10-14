@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quicklinks on Viana Industries</title>
+    <link>https://vianaIndustries.github.io/quicklinks/</link>
+    <description>Recent content in Quicklinks on Viana Industries</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Feb 2023 21:43:49 +0100</lastBuildDate><atom:link href="https://vianaIndustries.github.io/quicklinks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3D Printing</title>
+      <link>https://vianaIndustries.github.io/quicklinks/3dprinting/</link>
+      <pubDate>Fri, 24 Feb 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/quicklinks/3dprinting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>https://vianaIndustries.github.io/quicklinks/code/</link>
+      <pubDate>Fri, 24 Feb 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/quicklinks/code/</guid>
+      <description>Liniux/Octoprint hostname -I
+ssh user@machine
+sudo octoprint_deploy/octoprint_deploy.sh
+sudo shutdown
+Hugo hugo serve
+hugo
+GIT git init
+git add .
+git status
+git commit -m &amp;ldquo;menssage&amp;rdquo;
+git push</description>
+    </item>
+    
+  </channel>
+</rss>
