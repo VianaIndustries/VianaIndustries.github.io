@@ -67,11 +67,11 @@
 
 
 
-<title itemprop="name">Viana Industries - Workbench 2</title>
-<meta property="og:title" content=Viana&#32;Industries&#32;-&#32;Workbench&#32;2 />
-<meta name="twitter:title" content=Viana&#32;Industries&#32;-&#32;Workbench&#32;2 />
-<meta itemprop="name" content=Viana&#32;Industries&#32;-&#32;Workbench&#32;2 />
-<meta name="application-name" content=Viana&#32;Industries&#32;-&#32;Workbench&#32;2 />
+<title itemprop="name">Viana Industries - 7 segment Shift Register</title>
+<meta property="og:title" content=Viana&#32;Industries&#32;-&#32;7&#32;segment&#32;Shift&#32;Register />
+<meta name="twitter:title" content=Viana&#32;Industries&#32;-&#32;7&#32;segment&#32;Shift&#32;Register />
+<meta itemprop="name" content=Viana&#32;Industries&#32;-&#32;7&#32;segment&#32;Shift&#32;Register />
+<meta name="application-name" content=Viana&#32;Industries&#32;-&#32;7&#32;segment&#32;Shift&#32;Register />
 <meta property="og:site_name" content="Viana Industries" />
 
 
@@ -120,14 +120,14 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Workbench 2",
+    "headline": "7 segment Shift Register",
     "author": {
       "@type": "Person",
       "name": ""
     },
     "datePublished": "2023-10-08",
     "description": "",
-    "wordCount": "17",
+    "wordCount": "465",
     "mainEntityOfPage": "True",
     "dateModified": "2023-10-08",
     "image": {
@@ -153,7 +153,7 @@
     
     
 
-<link type="text/css" rel="stylesheet" href="/css/bundle.min.ae73292c6376e09182c09ba29ef6e6e3300dbf5300bfb5bc522c5f8eda5c279b.css">
+<link type="text/css" rel="stylesheet" href="/css/bundle.min.6c9c584a2ad2cb3c6510f9444773810832c9f154296050d36ac20264607cb7d2.css">
 
 
     
@@ -262,9 +262,6 @@
                 
                 
             
-                
-                
-            
             
                 
                 
@@ -276,9 +273,6 @@
         
             
 
-            
-                
-                
             
                 
                 
@@ -325,19 +319,6 @@
             
                 
                 
-                    <li class="heading">
-                        <a href="/theory/">Theory</a>
-                    </li>
-                    
-                        <li class="sub-heading">
-                            
-                        </li>
-                        
-                    
-                
-            
-                
-                
             
             
                 
@@ -375,10 +356,11 @@
                                 <a href="https://vianaIndustries.github.io/quicklinks/code/">Code</a>
                             </li>
                         
+                            <li class="bullet">
+                                <a href="https://vianaIndustries.github.io/quicklinks/markdown/">Markdown</a>
+                            </li>
+                        
                     
-                
-            
-                
                 
             
                 
@@ -402,9 +384,6 @@
                         <a href="/about/">About</a>
                     </li>
                     
-                
-            
-                
                 
             
                 
@@ -494,7 +473,7 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
                 <div class="post">
   <div class="info">
     <h1 class="post-title">
-        <a href="https://vianaIndustries.github.io/tutorial/workbench-4/">Workbench 2</a>
+        <a href="https://vianaIndustries.github.io/tutorial/workbench-4/">7 segment Shift Register</a>
     </h1>
     
         <time datetime="2023-10-08T21:43:49&#43;0100" class="post-date">
@@ -509,22 +488,207 @@ powered by <a target="_blank" href="https://gohugo.io">Hugo</a> | themed with <a
     
 </div>
 
-  <h1 id="workbench-2">Workbench #2</h1>
-<p>Created: January 4, 2023 7:37 PM</p>
-<p><img src="/post1/IMG_0749.jpg" alt="IMG_0749.jpg"></p>
-<p><img src="/post1/IMG_0748.jpg" alt="IMG_0748.jpg"></p>
-<p><img src="/post1/IMG_0746.jpg" alt="IMG_0746.jpg"></p>
-<p><img src="/post1/IMG_0747.jpg" alt="IMG_0747.jpg"></p>
-<p><img src="/post1/IMG_0745.jpg" alt="IMG_0745.jpg"></p>
-<p><img src="/post1/IMG_0761.jpg" alt="IMG_0761.jpg"></p>
-<p>4x 20x40 pinho</p>
-<p>2x 40x40 casquinha branca</p>
-<p>2x mdf/aglomerado</p>
+  <ul>
+<li>
+<p>Code</p>
+<pre tabindex="0"><code>; PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[env:esp07s]
+platform = espressif8266
+board = esp07s
+framework = arduino
+lib_deps = 
+	arduino-libraries/NTPClient@^3.2.1
+	paulstoffregen/Time@^1.6.1
+monitor_speed = 115200
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;NTPClient.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ESP8266WiFi.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;WiFiUdp.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;TimeLib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> latchPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;  <span style="color:#75715e">// Latch pin of 74HC595 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> clockPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>; <span style="color:#75715e">// Clock pin of 74HC595 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> dataPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;  <span style="color:#75715e">// Data pin of 74HC595 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>byte  leds <span style="color:#f92672">=</span> B00000000; ; 
+</span></span><span style="display:flex;"><span>byte seg <span style="color:#f92672">=</span> B11111111;<span style="color:#75715e">// Variable to hold the pattern of which LEDs are currently turned on or off
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>byte dis[] <span style="color:#f92672">=</span>{<span style="color:#ae81ff">0x3</span>,<span style="color:#ae81ff">0x9F</span>,<span style="color:#ae81ff">0x25</span>,<span style="color:#ae81ff">0xD</span>,<span style="color:#ae81ff">0x99</span>,<span style="color:#ae81ff">0x49</span>,<span style="color:#ae81ff">0x41</span>,<span style="color:#ae81ff">0x1F</span>,<span style="color:#ae81ff">0x1</span>,<span style="color:#ae81ff">0x19</span>,<span style="color:#ae81ff">0x11</span>,<span style="color:#ae81ff">0xC1</span>,<span style="color:#ae81ff">0x63</span>,<span style="color:#ae81ff">0xC1</span>,<span style="color:#ae81ff">0x61</span>,<span style="color:#ae81ff">0x71</span>};
+</span></span><span style="display:flex;"><span>byte pos[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">128</span>,<span style="color:#ae81ff">64</span>,<span style="color:#ae81ff">32</span>,<span style="color:#ae81ff">16</span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> flag <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> ssid <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TP-Link_F09A&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;14742781&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> Time[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TIME:00:00:00&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> Date[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DATE:00/00/2000&#34;</span>;
+</span></span><span style="display:flex;"><span>byte last_second, second_, minute_, hour_, day_, month_;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> year_;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>WiFiUDP ntpUDP;
+</span></span><span style="display:flex;"><span>NTPClient <span style="color:#a6e22e">timeClient</span>(ntpUDP);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">long</span> interval <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>; 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> previousMillis <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> unix_epoch;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> epochBirthDay <span style="color:#f92672">=</span> <span style="color:#ae81ff">876009600</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">updateShiftRegister</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  digitalWrite(latchPin, LOW);
+</span></span><span style="display:flex;"><span>  shiftOut(dataPin, clockPin, LSBFIRST, leds);
+</span></span><span style="display:flex;"><span>  shiftOut(dataPin, clockPin, LSBFIRST, seg);
+</span></span><span style="display:flex;"><span>  digitalWrite(latchPin, HIGH);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">updateTime</span>(){
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> currentMillis <span style="color:#f92672">=</span> millis();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (currentMillis <span style="color:#f92672">-</span> previousMillis <span style="color:#f92672">&gt;=</span> interval) {
+</span></span><span style="display:flex;"><span>    previousMillis <span style="color:#f92672">=</span> currentMillis;
+</span></span><span style="display:flex;"><span>  timeClient.update();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  unix_epoch <span style="color:#f92672">=</span> timeClient.getEpochTime();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">displayTime</span>(){
+</span></span><span style="display:flex;"><span> second_ <span style="color:#f92672">=</span> second(unix_epoch);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    minute_ <span style="color:#f92672">=</span> minute(unix_epoch);
+</span></span><span style="display:flex;"><span>    hour_   <span style="color:#f92672">=</span> hour(unix_epoch);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    leds <span style="color:#f92672">=</span> dis[hour_   <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span> ];
+</span></span><span style="display:flex;"><span>    seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>    updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    leds <span style="color:#f92672">=</span> dis[(hour_   <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>)<span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> ];
+</span></span><span style="display:flex;"><span>    seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>    updateShiftRegister();
+</span></span><span style="display:flex;"><span>    ;
+</span></span><span style="display:flex;"><span>    leds <span style="color:#f92672">=</span> dis[minute_ <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span> ];
+</span></span><span style="display:flex;"><span>    seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>    updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    leds <span style="color:#f92672">=</span> dis[minute_ <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> ];
+</span></span><span style="display:flex;"><span>    seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span>    updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    leds <span style="color:#f92672">=</span> dis[second_ <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>];
+</span></span><span style="display:flex;"><span>    seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">6</span>];
+</span></span><span style="display:flex;"><span>    updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    leds <span style="color:#f92672">=</span> dis[second_ <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span> ];
+</span></span><span style="display:flex;"><span>    seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">7</span>];
+</span></span><span style="display:flex;"><span>    updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">age</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> dif <span style="color:#f92672">=</span> unix_epoch <span style="color:#f92672">-</span> epochBirthDay;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> epochAge <span style="color:#f92672">=</span> dif <span style="color:#f92672">/</span> <span style="color:#ae81ff">31556926.0000</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(<span style="color:#66d9ef">int</span>)(epochAge   <span style="color:#f92672">/</span> <span style="color:#ae81ff">10</span>)];
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(<span style="color:#66d9ef">int</span>)fmod(epochAge  , <span style="color:#ae81ff">10</span>)] <span style="color:#f92672">&amp;</span> B11111110;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">int</span> dec <span style="color:#f92672">=</span> epochAge <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000000</span>;
+</span></span><span style="display:flex;"><span>  Serial.println(dec);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(dec <span style="color:#f92672">-</span>((dec<span style="color:#f92672">/</span><span style="color:#ae81ff">1000000</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">1000000</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">100000</span>] ;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(dec <span style="color:#f92672">-</span>((dec<span style="color:#f92672">/</span><span style="color:#ae81ff">100000</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">100000</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span>] ;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">3</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(dec <span style="color:#f92672">-</span>((dec<span style="color:#f92672">/</span><span style="color:#ae81ff">10000</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">10000</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>] ;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(dec <span style="color:#f92672">-</span>((dec<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">1000</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>] ;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">5</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(dec <span style="color:#f92672">-</span>((dec<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>))<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>] ;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">6</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  leds <span style="color:#f92672">=</span> dis[(dec <span style="color:#f92672">-</span>((dec<span style="color:#f92672">/</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">*</span><span style="color:#ae81ff">10</span>))] ;
+</span></span><span style="display:flex;"><span>  seg<span style="color:#f92672">=</span>   pos[<span style="color:#ae81ff">7</span>];
+</span></span><span style="display:flex;"><span>  updateShiftRegister();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>(){
+</span></span><span style="display:flex;"><span>  pinMode(latchPin, OUTPUT);
+</span></span><span style="display:flex;"><span>  pinMode(dataPin, OUTPUT);  
+</span></span><span style="display:flex;"><span>  pinMode(clockPin, OUTPUT);
+</span></span><span style="display:flex;"><span>  Serial.begin(<span style="color:#ae81ff">115200</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  WiFi.begin(ssid, password);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span> ( WiFi.status() <span style="color:#f92672">!=</span> WL_CONNECTED ) {
+</span></span><span style="display:flex;"><span>    delay ( <span style="color:#ae81ff">500</span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  timeClient.begin();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>  updateTime();
+</span></span><span style="display:flex;"><span>  age();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+<li></li>
+</ul>
+<pre><code>&lt;aside&gt;
+💡 This code changes the second to last segment turning it off , this changes the bit to 1 that is off
+
+```python
+
+byte dis[] ={0x3,0x9F,0x25,0xD,0x99,0x49,0x41,0x1F,0x1,0x19,0x11,0xC1,0x63,0xC1,0x61,0x71};
+leds = dis[(int)fmod(epochAge  , 10)] &amp; B11111101 | B00000010;
+```
+
+&lt;/aside&gt;
+</code></pre>
+<p>1 year = 31556926 seconds</p>
+<p>0.1=36.52 days</p>
+<p>0.01=87.66 hours</p>
+<p>0.001=8.76 hours</p>
+<p>0,0001=52.58 minutes</p>
+<p>0.00001=5.26 minutes</p>
+<p>0.000001=31.56 seconds</p>
+<p><img src="/post13/IMG_20210710_172801.jpg" alt="Alt text">
+<img src="/post13/IMG_20210717_184415.jpg" alt="Alt text">
+<img src="/post13/IMG_20210710_202134_1.jpg" alt="Alt text"></p>
 
   <hr>
 <div class="footer">
     
 	    
+            <a class="previous-post" href="https://vianaIndustries.github.io/tutorial/linuxoctoprint/?ref=footer"><span style="font-weight:bold;">« Previous</span><br>Linux Octoprint</a>
+        
 	    
     
 </div>

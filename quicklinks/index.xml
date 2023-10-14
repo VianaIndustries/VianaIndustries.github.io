@@ -13,7 +13,7 @@
       <pubDate>Fri, 24 Feb 2023 21:43:49 +0100</pubDate>
       
       <guid>https://vianaIndustries.github.io/quicklinks/3dprinting/</guid>
-      <description></description>
+      <description>M303 - PID autotune M303 E0 C8 S210 M503 - Report Settings M119 - Endstop States </description>
     </item>
     
     <item>
@@ -33,6 +33,15 @@ git add .
 git status
 git commit -m &amp;ldquo;menssage&amp;rdquo;
 git push</description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://vianaIndustries.github.io/quicklinks/markdown/</link>
+      <pubDate>Fri, 24 Feb 2023 21:43:49 +0100</pubDate>
+      
+      <guid>https://vianaIndustries.github.io/quicklinks/markdown/</guid>
+      <description></description>
     </item>
     
   </channel>

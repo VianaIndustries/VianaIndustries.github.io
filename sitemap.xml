@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vianaIndustries.github.io/theory/</loc>
+    <loc>https://vianaIndustries.github.io/tutorial/workbench-4/</loc>
     <lastmod>2023-10-08T21:43:49+01:00</lastmod>
   </url><url>
     <loc>https://vianaIndustries.github.io/tutorial/</loc>
@@ -11,16 +11,16 @@
     <loc>https://vianaIndustries.github.io/</loc>
     <lastmod>2023-10-08T21:43:49+01:00</lastmod>
   </url><url>
-    <loc>https://vianaIndustries.github.io/tutorial/workbench-4/</loc>
-    <lastmod>2023-10-08T21:43:49+01:00</lastmod>
+    <loc>https://vianaIndustries.github.io/tutorial/linuxoctoprint/</loc>
+    <lastmod>2023-09-29T21:43:49+01:00</lastmod>
   </url><url>
-    <loc>https://vianaIndustries.github.io/theory/workbench-2/</loc>
-    <lastmod>2023-10-08T21:43:49+01:00</lastmod>
-  </url><url>
-    <loc>https://vianaIndustries.github.io/project/iot-bell/</loc>
-    <lastmod>2023-04-09T21:43:49+01:00</lastmod>
+    <loc>https://vianaIndustries.github.io/project/3d-design/</loc>
+    <lastmod>2023-04-22T21:43:49+01:00</lastmod>
   </url><url>
     <loc>https://vianaIndustries.github.io/project/</loc>
+    <lastmod>2023-04-22T21:43:49+01:00</lastmod>
+  </url><url>
+    <loc>https://vianaIndustries.github.io/project/iot-bell/</loc>
     <lastmod>2023-04-09T21:43:49+01:00</lastmod>
   </url><url>
     <loc>https://vianaIndustries.github.io/quicklinks/3dprinting/</loc>
@@ -32,11 +32,23 @@
     <loc>https://vianaIndustries.github.io/quicklinks/code/</loc>
     <lastmod>2023-02-24T21:43:49+01:00</lastmod>
   </url><url>
+    <loc>https://vianaIndustries.github.io/quicklinks/markdown/</loc>
+    <lastmod>2023-02-24T21:43:49+01:00</lastmod>
+  </url><url>
     <loc>https://vianaIndustries.github.io/quicklinks/</loc>
     <lastmod>2023-02-24T21:43:49+01:00</lastmod>
   </url><url>
+    <loc>https://vianaIndustries.github.io/project/sign-engenhocas/</loc>
+    <lastmod>2023-01-31T21:43:49+01:00</lastmod>
+  </url><url>
     <loc>https://vianaIndustries.github.io/project/soldering-iron-caddy/</loc>
     <lastmod>2023-01-17T21:43:49+01:00</lastmod>
+  </url><url>
+    <loc>https://vianaIndustries.github.io/project/stand/</loc>
+    <lastmod>2023-01-17T21:43:49+01:00</lastmod>
+  </url><url>
+    <loc>https://vianaIndustries.github.io/project/sign-kerby/</loc>
+    <lastmod>2023-01-04T21:43:49+01:00</lastmod>
   </url><url>
     <loc>https://vianaIndustries.github.io/project/workbench-3/</loc>
     <lastmod>2023-01-04T21:43:49+01:00</lastmod>
@@ -46,6 +58,9 @@
   </url><url>
     <loc>https://vianaIndustries.github.io/project/phant0mdeck/</loc>
     <lastmod>2022-03-26T21:43:49+01:00</lastmod>
+  </url><url>
+    <loc>https://vianaIndustries.github.io/tutorial/twitchflasher/</loc>
+    <lastmod>2022-02-22T21:43:49+01:00</lastmod>
   </url><url>
     <loc>https://vianaIndustries.github.io/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
